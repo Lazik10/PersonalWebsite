@@ -1,0 +1,50 @@
+﻿@model ASPMVCBlog.Models.Article
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+@section Scripts
+{
+    <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+    <script src="@Url.Content("~/js/initTinyMCE.js")"></script>
+}
+
+@*<h1>Create</h1>*@
+<head>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+
+<h4>Article</h4>
+<hr />
+<div class="row">
+
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label">Title</label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Content" class="control-label"></label>
+                <textarea asp-for="Content" class="form-control"></textarea> 
+                @*<input asp-for="Content" class="form-control" />*@
+                <span asp-validation-for="Content" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Desctiption" class="control-label"></label>
+                <input asp-for="Desctiption" class="form-control" />
+                <span asp-validation-for="Desctiption" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

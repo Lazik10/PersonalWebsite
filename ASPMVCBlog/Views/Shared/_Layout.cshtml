@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Lazik Website</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/lite-yt-embed.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ASPMVCBlog.styles.css" asp-append-version="true" />
+</head>
+
+<body>
+    <div class="main-grid">
+        <header>
+            <div class="banner">
+                <div class="logo">
+                    <div class="logo-right"></div>
+                    <div class="logo-left"></div>
+                    <div class="logo-bottom"></div>
+                </div>
+
+                <div class="nickname">
+                        LAZIK
+                </div>
+            </div>
+            <div class="icon-bar">
+                <a href="https://www.github.com/Lazik10" target="_blank" rel="noopener noreferrer"><img src="/images/github.png" alt="GitHub" class="github"></a> 
+                <a href="https://www.linkedin.com/in/patrik-l%C3%A1ska-3aba91220" target="_blank" rel="noopener noreferrer"><img src="/images/linkedin.png" alt="Linkedin" class="linkedin"></a> 
+                <a href="https://www.facebook.com/Lazik10" target="_blank" rel="noopener noreferrer"><img src="/images/facebook.png" alt="Facebook" class="facebook"></a> 
+                <a href="https://www.instagram.com/lazik2110" target="_blank" rel="noopener noreferrer"><img src="/images/instagram.png" alt="Instagram" class="instagram"></a>
+                <a href="https://www.twitter.com/Lazik10" target="_blank" rel="noopener noreferrer"><img src="/images/twitter.png" alt="Twitter" class="twitter"></a> 
+                <a href="https://www.youtube.com/Lazik10" target="_blank" rel="noopener noreferrer"><img src="/images/youtube.png" alt="Youtube" class="youtube"></a> 
+                <a href="https://open.spotify.com/user/1296169960?si=bea43e359c8a4a5a" target="_blank" rel="noopener noreferrer"><img src="/images/spotify.png" alt="Spotify" class="spotify"></a> 
+                <a href="https://discord.gg/Y4afruyb" target="_blank" rel="noopener noreferrer"><img src="/images/discord.png" alt="Discord" class="discord"></a> 
+                <a href="https://www.twitch.tv/Lazik10" target="_blank" rel="noopener noreferrer"><img src="/images/twitch.png" alt="Twitch" class="twitch"></a> 
+            </div>
+        </header>
+
+        <nav class="nav-links">
+            <div class="wrapper">
+                <div class="nav-button">
+                    <div class="side default-side"><a asp-controller="Home" asp-action="Index">Home</a></div>
+                    <div class="side hover-side"><a asp-controller="Home" asp-action="Index">Lazik</a></div>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="nav-button">
+                    <div class="side default-side"><a asp-controller="Home" asp-action="Skills">Skills</a></div>
+                    <div class="side hover-side"><a asp-controller="Home" asp-action="Skills">Skills</a></div>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="nav-button">
+                    <div class="side default-side"><a asp-controller="Home" asp-action="MyWork">My Work</a></div>
+                    <div class="side hover-side"><a asp-controller="Home" asp-action="MyWork">My Work</a></div>
+                </div>
+            </div>
+@*            <div class="wrapper">
+                <div class="nav-button">
+                    <div class="side default-side"><a asp-controller="Home" asp-action="Games">Games</a></div>
+                    <div class="side hover-side"><a asp-controller="Home" asp-action="Games">Games</a></div>
+                </div>
+            </div>*@
+            <div class="wrapper">
+                <div class="nav-button">
+                    <div class="side default-side"><a asp-controller="Articles" asp-action="Index">Blog</a></div>
+                    <div class="side hover-side"><a asp-controller="Articles" asp-action="Index">Blog</a></div>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="nav-button">
+                    <div class="side default-side"><a asp-controller="Home" asp-action="Contact">Contact</a></div>
+                    <div class="side hover-side"><a asp-controller="Home" asp-action="Contact">Contact</a></div>
+                </div>
+            </div>
+
+            @*
+            <div class="wrapper">
+                <div class="btn nav-button">
+                    <div class="side default-side"><a href="https://localhost:7014/Account/Login"></a>Account</div>
+                    <div class="side hover-side"><a href="https://localhost:7014/Account/Login"></a>Account</div>
+                </div>
+            </div>
+            *@
+        </nav>
+
+        <article>
+            <header class="header-title">
+                <h1>@ViewData["Title"]</h1>
+            </header>
+
+            <section">
+                <div>
+                    @RenderBody()
+                </div>
+            </section>
+        </article>
+
+        <footer>
+            <div class="author">
+                Created by &copy;Lázik   2022
+            </div>
+        </footer>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/lite-yt-embed.js"></script>
+    @*@await RenderSectionAsync("Scripts", required: false)*@
+</body>
+</html>

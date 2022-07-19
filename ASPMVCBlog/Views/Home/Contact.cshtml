@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Contacts";
+}
+
+<div class="contacts-grid">
+    <div class="contact-icons">
+        <a href="https://www.github.com/Lazik10" target="_blank" rel="noopener noreferrer"><img src="/images/github.png" alt="GitHub" class="github"></a> 
+        <a href="https://www.linkedin.com/in/patrik-l%C3%A1ska-3aba91220" target="_blank" rel="noopener noreferrer"><img src="/images/linkedin.png" alt="Linkedin" class="linkedin"></a> 
+        <a href="https://www.facebook.com/Lazik10" target="_blank" rel="noopener noreferrer"><img src="/images/facebook.png" alt="Facebook" class="facebook"></a> 
+        <a href="https://www.instagram.com/lazik2110" target="_blank" rel="noopener noreferrer"><img src="/images/instagram.png" alt="Instagram" class="instagram"></a>
+        <a href="https://www.twitter.com/Lazik10" target="_blank" rel="noopener noreferrer"><img src="/images/twitter.png" alt="Twitter" class="twitter"></a> 
+        <a href="https://www.youtube.com/Lazik10" target="_blank" rel="noopener noreferrer"><img src="/images/youtube.png" alt="Youtube" class="youtube"></a> 
+        <a href="https://open.spotify.com/user/1296169960?si=bea43e359c8a4a5a" target="_blank" rel="noopener noreferrer"><img src="/images/spotify.png" alt="Spotify" class="spotify"></a> 
+        <a href="https://discord.gg/Y4afruyb" target="_blank" rel="noopener noreferrer"><img src="/images/discord.png" alt="Discord" class="discord"></a> 
+        <a href="https://www.twitch.tv/Lazik10" target="_blank" rel="noopener noreferrer" class="whole-row"><img src="/images/twitch.png" alt="Twitch" class="twitch"></a> 
+    </div>
+
+    <form action="https://api.web3forms.com/submit" method="POST" id="email-form">
+        <input type="hidden" name="access_key" value="d2312ab7-6483-4faf-b8f5-e174c8b5361a" />
+        <input type="hidden" name="subject" value="New Submission from Web3Forms" />
+        <input type="hidden" name="redirect" value="https://web3forms.com/success" />
+        <input type="checkbox" name="botcheck" id="" style="display: none;" />
+
+        <div class="send-email-text"> Send Email </div>
+        <div class="contact-flex-row">
+            <div class="contact-flex">
+                <label for="name" class="grow">Name</label>
+                <input type="text" name="name" id="name" placeholder="Name" required class="normal-text grow" />
+            </div>
+            <div class="contact-flex">
+                <label for="email" class="grow">Email</label>
+                <input type="email" name="email" id="email" placeholder="example@email.com" required class="normal-text grow" />
+            </div>
+            <div class="contact-flex">
+                <label for="phone" class="grow">Phone</label>
+                <input type="text" name="phone" id="phone" placeholder="+420 123 456 789" class="normal-text grow" />
+            </div>
+        </div>
+
+        <textarea rows="10" name="message" id="message" class="text-area normal-text" placeholder="Your Message" required></textarea>
+
+        <div class="space"></div>
+
+        <button type="submit" class="normal-text" id="send-email-button">
+            Send Message
+        </button>
+    </form>
+</div>
+
